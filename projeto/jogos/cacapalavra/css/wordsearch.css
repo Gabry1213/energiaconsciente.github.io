@@ -1,0 +1,144 @@
+* {
+  text-align: center;
+  font-family: "Moon", Arial, sans serif;
+  font-weight: normal;
+}
+
+h1,
+h2,
+#wordTheme,
+#solveButton,
+#newGameButton,
+.listWord {
+  padding: 5px;
+}
+
+h1,
+h2,
+#wordTheme,
+#solveButton,
+#newGameButton {
+  border: 2px black solid;
+  border-radius: 8px;
+}
+
+h1,
+h2,
+.cell,
+#wordTheme,
+#wordlist {
+  background-color: white;
+  border-radius: 8px;
+}
+
+h1,
+h2 {
+  margin: 10px auto 10px auto;
+  display: table;
+}
+
+body {
+  background-color: white;
+}
+
+#wordTheme {
+  border-radius: 8px;
+}
+
+#wordboard {
+  margin: 20px auto 0 auto;
+  border: 2px black solid;
+  display: table;
+  min-width: 600px;
+  border-radius: 8px;
+}
+
+.boardRow {
+  display: table-row;
+}
+
+.cell {
+  margin: 0 auto;
+  border: none;
+  display: table-cell;
+  height: 30px;
+  width: 30px;
+  font-size: 17px;
+  padding: 0;
+  outline: 0;
+
+  /*ensures text can't be accidentally selected*/
+  cursor: default;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.cell:hover {
+  background-color: green;
+}
+
+.cell.selectable {
+  background-color: lightgreen;
+}
+
+.cell.selected {
+  background-color: green;
+}
+
+.cell.found {
+  background-color: darkgreen;
+  border: 1px black solid;
+  font-weight: bold;
+  color: white;
+}
+
+#wordlist {
+  margin: 40px auto 0 auto;
+  border: 2px black solid;
+  display: table;
+  min-width: 600px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.listRow {
+  display: table-row;
+}
+
+.listWord {
+  display: table-cell;
+}
+
+.listWord.found {
+  color: darkgreen;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+#solveButton,
+#newGameButton {
+  background-color: green;
+  margin: 20px auto 20px auto;
+  display: block;
+  outline: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+}
+
+@font-face {
+  font-family: "Moon";
+  src: url("../fonts/Moon-Regular.woff2") format("woff2"),
+    url("../fonts/Moon-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Moon";
+  src: url("../fonts/Moon-Bold.woff2") format("woff2"),
+    url("../fonts/Moon-Bold.woff") format("woff");
+  font-weight: bold;
+}

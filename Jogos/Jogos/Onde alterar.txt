@@ -1,0 +1,4 @@
+Crossword - script.js
+Wordsearch - wordsearchcontroller.js
+Quiz-JS-master - jsmultiplequiz.js (var questions and function displayScore())
+Hangman-Game-master - new-game.js (wordsList)

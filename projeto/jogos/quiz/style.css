@@ -1,0 +1,62 @@
+body {
+  font-family: "Moon", Arial, sans serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#title {
+  text-decoration: underline;
+}
+
+#quiz {
+  text-indent: 10px;
+  display: none;
+}
+
+.button {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 60px;
+  padding: 8px;
+  position: relative;
+  float: right;
+  background-color: green;
+  color: white;
+  margin: -10px 2px 0 2px;
+}
+
+button {
+  position: relative;
+  float: right;
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
+#container {
+  width: 50%;
+  margin: auto;
+  padding: 0 25px 40px 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#prev {
+  display: none;
+}
+
+#start {
+  display: none;
+  width: 90px;
+}

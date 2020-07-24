@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Economia Energéticafakfoa</title>
+</head>
+
+<body class="formata">
+    <div id="app">
+        <div id="header">
+            <p class="formata title">{{ titulo }}</p>
+            <!-- <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="#">INICIO</a>
+                        <a href="#">FONTES ENERGÉTICAS</a>
+                        <a href="#gameCP">FIXAÇÃO DE CONTEÚDO</a>
+                        <a href="#">QUEM SOMOS</a>
+                    </li>
+                </ul>
+            </nav> -->
+        </div>
+        <div id="corpo">
+
+
+            <div id="gamePC">
+                <iframe src="jogos/cruzada/index.html">
+                    <p>Palavras Cruzadas</p>
+                </iframe>
+            </div>
+
+            <div id="gameCP">
+                <iframe src="jogos/cacapalavra/wordsearch.html">
+                    <p>Caça Palavras</p>
+                </iframe>
+            </div>
+
+            <div id="gameQUIZ">
+                <iframe src="jogos/quiz/index.html">
+                    <p>Quiz</p>
+                </iframe>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="formata title">{{ vlw }}</p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Economia Energética",
+                vlw: "Vai mano"
+            },
+            filters: {
+
+            },
+            methods: {
+
+            }
+        });
+    </script>
+</body>
+
+</html>
