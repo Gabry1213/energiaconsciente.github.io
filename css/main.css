@@ -1,5 +1,37 @@
 * {
-  font-family: "Moon", Arial, sans serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+.formata::-webkit-scrollbar {
+  display: none;
+}
+
+.tableENERGIA tr td img {
+  width: 90%;
+  height: 40%;
+}
+.energiaEletrica {
+  margin-top: 5%;
+}
+.fontesEner {
+  margin-top: 5%;
+}
+.classFontes {
+  margin-top: 5%;
+}
+#corpo {
+  text-align: justify;
+}
+.conteudo p {
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.conteudo h3 {
+  font-weight: bold;
 }
 
 #header {
@@ -38,6 +70,8 @@
   height: 7em;
   width: 100%;
   background-color: #19882c;
+  position: absolute;
+  margin-top: 340px;
 }
 
 #gamePC iframe {
@@ -56,4 +90,133 @@
   width: 60%;
   height: 70em;
   border: none;
+}
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 0.05rem solid #fff;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* back to top  */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /*Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #333; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #272727; /* Add a dark-grey background on hover */
+  transition: 0.4s;
 }

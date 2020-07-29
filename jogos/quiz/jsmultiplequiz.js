@@ -70,7 +70,6 @@
     displayNext();
     $("#start").hide();
   });
-
   // animações de hover
   $(".button").on("mouseenter", function () {
     $(this).addClass("active");
@@ -157,35 +156,35 @@
     switch (selection) {
       case "00":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "Parabéns, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "01":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "2 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "02":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "3 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "03":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "4 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "04":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "5 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "05":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "6 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "06":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "7 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "07":
         matchKit =
-          "Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
+          "8 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
         break;
       case "10":
         matchKit =

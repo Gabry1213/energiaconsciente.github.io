@@ -24,11 +24,10 @@ function WordSearchController(
   //an object containing various themes/words for the game
   var searchTypes = {
     "Energia!": [
-      ["asymptote", "differential", "algorithm", "boolean"],
-      ["euclidean", "integral", "logarithm", "matrix"],
-      ["riemann", "polyhedron", "theta", "vector"],
-      ["binomial", "pythagoras", "eccentricity", "unit circle"],
-      ["derivative", "polar coordinates", "tangent", "scalene"],
+      ["Consumo", "Sustentavel", "uso", "Consciente"],
+      ["Disperdicio", "fontes", "energia", "usina"],
+      ["Solar", "Carvao", "nuclear", "eolica"],
+      ["petroleo", "biomassa", "hidreletrica", "geotermica"],
     ],
   };
 

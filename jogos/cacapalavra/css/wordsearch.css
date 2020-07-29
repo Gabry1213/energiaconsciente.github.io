@@ -38,7 +38,8 @@ h2 {
 }
 
 body {
-  background-color: white;
+  background-color: #333;
+  border: none;
 }
 
 #wordTheme {
@@ -47,10 +48,10 @@ body {
 
 #wordboard {
   margin: 20px auto 0 auto;
-  border: 2px black solid;
   display: table;
   min-width: 600px;
   border-radius: 8px;
+  background-color: #fff;
 }
 
 .boardRow {
@@ -77,19 +78,19 @@ body {
 }
 
 .cell:hover {
-  background-color: green;
+  background-color: #e85a04;
 }
 
 .cell.selectable {
-  background-color: lightgreen;
+  background-color: #f5955a;
 }
 
 .cell.selected {
-  background-color: green;
+  background-color: #e85a04;
 }
 
 .cell.found {
-  background-color: darkgreen;
+  background-color: #e85a04;
   border: 1px black solid;
   font-weight: bold;
   color: white;
@@ -113,14 +114,14 @@ body {
 }
 
 .listWord.found {
-  color: darkgreen;
+  color: #e85a04;
   text-decoration: line-through;
   font-weight: bold;
 }
 
 #solveButton,
 #newGameButton {
-  background-color: green;
+  background-color: #e85a04;
   margin: 20px auto 20px auto;
   display: block;
   outline: 0;

@@ -25,7 +25,7 @@
     // append clues markup after puzzle wrapper div
     // This should be moved into a configuration object
     this.after(
-      '<div id="puzzle-clues"><h2>Horizontal</h2><ol id="across"></ol><h2>Vertical</h2><ol id="down"></ol></div>'
+      '<div id="puzzle-clues"><h1 style="color:white;">Horizontal</h1><ol id="across"></ol><h1 style="color:white;">Vertical</h1><ol id="down"></ol></div>'
     );
 
     // initialize some variables
