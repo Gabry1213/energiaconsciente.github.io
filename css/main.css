@@ -23,10 +23,10 @@
   margin-top: 5%;
 }
 #corpo {
-  text-align: justify;
+  text-align: left;
 }
 .conteudo p {
-  text-align: justify;
+  text-align: left;
   line-height: 1.5;
   font-size: 18px;
 }
@@ -228,13 +228,13 @@ body {
 }
 @media screen and (max-width: 992px) and (min-width: 577px) {
   #col {
-    margin-left: 20%;
-    margin-bottom: 10%;
+    margin-left: 17%;
+    margin-bottom: 13%;
   }
 }
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   #col {
-    margin-left: 20%;
+    margin-left: 17%;
     margin-bottom: 5%;
   }
 }
