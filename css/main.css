@@ -220,3 +220,21 @@ body {
   background-color: #272727; /* Add a dark-grey background on hover */
   transition: 0.4s;
 }
+
+@media screen and (max-width: 576px) {
+  #col {
+    margin-bottom: 15%;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 577px) {
+  #col {
+    margin-left: 20%;
+    margin-bottom: 10%;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #col {
+    margin-left: 20%;
+    margin-bottom: 5%;
+  }
+}
