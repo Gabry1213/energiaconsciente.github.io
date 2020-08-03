@@ -27,9 +27,15 @@
     <link href="assets/js/all.js" rel="stylesheet">
     <link href="assets/css/all.css" rel="stylesheet">
     <link rel="icon" type="imagem/png" href="/img/icon.png" />
+    <script>
+        function modalIdade() {
+            $('#exampleModal').modal('show')
+            console.log('hi')
+        }
+    </script>
 </head>
 
-<body class="formata"
+<body class="formata" onload="modalIdade()"
     style="background-image: url('https://c.pxhere.com/photos/fa/7a/power_generation_energy_production_windr_der_wind_power_renewable_energy_energy_environmental_technology_current-1377154.jpg!d');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
     <button onclick="topFunction()" id="myBtn" data-toggle="tooltip" data-placement="top" title="Voltar para o Topo">
         <i class="fas fa-arrow-alt-circle-up" style="font-size: 30px;"></i>
@@ -172,6 +178,9 @@
                         as Usinas hidrelétricas. As quatro outras fontes energéticas são elas: Energia Termoelétrica,
                         Eólica, Nuclear e Solar.</p>
                     <h4>Amazonas</h4>
+                    <p>As fontes energéticas implantadas pelo estado do Amazonas são bem diversificadas. Sendo
+                        constituído de: Energia Solar, Hidrelétrica, Biomassa, Gás
+                        Natural e Combustível Fóssil.</p>
                     <h4>Presidente Figueiredo</h4>
                     <p>No município de Presidente Figueiredo, 107KM da capital do Estado. Possui uma fonte energética
                         considerada limpa e renovável. A Usina hidreletrica do município está localizado na Vila de
@@ -212,16 +221,16 @@
                 </div>
                 <div class="fixaConteudo mt-3 mb-3 pt-5" id="fixaContent">
                     <h2>Fixação do conteúdo</h2>
-                    <!-- <div id="gamePC">
+                    <div id="gamePC">
                         <iframe src="jogos/cruzada/index.html" style="width:100%">
                         </iframe>
-                    </div> -->
+                    </div>
 
-                    <!-- <div id="gameCP">
+                    <div id="gameCP" class="row d-flex justify-content-center">
                         <iframe src="jogos/cacapalavra/wordsearch.html">
                             <p>Caça Palavras</p>
                         </iframe>
-                    </div> -->
+                    </div>
 
                     <!-- <div id="gameQUIZ">
                         <iframe src="jogos/quiz/index.html">
@@ -229,20 +238,80 @@
                         </iframe>
                     </div> -->
                 </div>
-                <div class="devPjt" id="dev">
-                    <h2>Dev</h2>
-                    <p>DEV - Vinícius Gabriel Freire Silva, estudante do 3°ano do Curso Integrado em Desenvolvimento de
-                        Sistemas, pelo Instituto Federal de Educação, Ciência e Tecnologia do Amazonas - Campus
-                        Presidente Figueredo.</p>
-                    <p>Orientadora - Profª Dra Clarice de Souza.</p>
+            </div>
+            <!-- Footer -->
+        </div>
+        <footer class="page-footer font-small teal pt-4" style="background-color: #222;">
+
+            <!-- Footer Text -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold" id="dev">DEV</h5>
+                        <p>DEV - Vinícius Gabriel Freire Silva, estudante do 3° ano do Curso Integrado em
+                            Desenvolvimento
+                            de
+                            Sistemas, pelo Instituto Federal de Educação, Ciência e Tecnologia do Amazonas - Campus
+                            Presidente Figueredo.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-md-0 mb-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">Orientadora</h5>
+                        <p>Orientadora - Profª Dra Clarice de Souza.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Text -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="http://www2.ifam.edu.br/"> ifam.edu.br</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Informe sua idade</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Você tem menos de 12 anos de idade?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Não</button>
+                    <button type="button" class="btn btn-primary btn-lg">Sim</button>
                 </div>
             </div>
         </div>
-
     </div>
-    <!-- <div id="footer">
-        <p class="formata title">{{ vlw }}</p>
-    </div> -->
+    <!-- modal -->
     <script src="https://unpkg.com/vue"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
@@ -253,8 +322,7 @@
         var app = new Vue({
             el: "#app",
             data: {
-                titulo: "Economia Energética",
-                vlw: "Vai mano"
+                showModalIdade: true
             },
             filters: {
 

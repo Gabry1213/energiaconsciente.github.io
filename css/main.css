@@ -26,7 +26,7 @@
   text-align: left;
 }
 .conteudo p {
-  text-align: left;
+  text-align: justify;
   line-height: 1.5;
   font-size: 18px;
 }
@@ -237,10 +237,17 @@ body {
   #col img {
     padding: 5%;
   }
+  iframe {
+    width: 1000px;
+  }
 }
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   #col {
     margin-left: 17%;
     margin-bottom: 5%;
   }
+}
+
+#exampleModal {
+  color: black;
 }
