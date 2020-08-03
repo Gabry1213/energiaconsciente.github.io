@@ -1,5 +1,6 @@
 body {
   font-family: "Moon", Arial, sans serif;
+  color: #fff;
 }
 
 h1 {
@@ -22,7 +23,7 @@ h1 {
   padding: 8px;
   position: relative;
   float: right;
-  background-color: green;
+  background-color: #e85a04;
   color: white;
   margin: -10px 2px 0 2px;
 }
