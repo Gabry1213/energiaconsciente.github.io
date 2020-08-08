@@ -1,21 +1,26 @@
 (function () {
   var questions = [
     {
+      type: "radio",
       question:
         "Ao finalizar o uso do qualquer aparelho eletrodoméstico, você o retira tomada?",
-      choices: ["SIM", "NÃO"],
+      choices: [
+        { answer: "Sim", check: true },
+        { answer: "Não", check: false },
+      ],
     },
     {
+      type: "checkbox",
       question: "Quais dessas fontes energéticas são consideradas renováveis?",
       choices: [
-        "Solar",
-        "Petróleo",
-        "Hidrelétrica",
-        "Geotérmica",
-        "Eolica",
-        "Biomassa",
-        "Carvão",
-        "Urânio",
+        { answer: "Solar", check: true },
+        { answer: "Petróleo", check: false },
+        { answer: "Hidrelétrica", check: true },
+        { answer: "Geotérmica", check: false },
+        { answer: "Eolica", check: true },
+        { answer: "Biomassa", check: true },
+        { answer: "Carvão", check: false },
+        { answer: "Urânio", check: false },
       ],
     },
   ];
@@ -38,7 +43,7 @@
     choose();
 
     // protecão caso não ecolha nenhuma questão
-    if (isNaN(selections[questionCounter])) {
+    if (isNaN(selections[questionCounter]) && hasAnswer2() == 0) {
       alert("Por favor, faça sua escolha!");
     } else {
       questionCounter++;
@@ -103,17 +108,41 @@
     var input = "";
     for (var i = 0; i < questions[index].choices.length; i++) {
       item = $("<li>");
-      input = '<input type="radio" name="answer" value=' + i + " />";
-      input += questions[index].choices[i];
+      input = `<input type="${questions[index].type}" name="answer" class="form-input" value="${i}" />`;
+      input += questions[index].choices[i].answer;
       item.append(input);
       radioList.append(item);
     }
     return radioList;
   }
 
+  function hasAnswer2() {
+    let qtd = 0;
+    var inputElements = document.getElementsByClassName("form-input");
+    for (var i = 0; i < inputElements.length; ++i) {
+      if (inputElements[i] != undefined) {
+        if (inputElements[i].checked) {
+          qtd++;
+        }
+      }
+    }
+    return qtd;
+  }
+
   // pega o valor da resposta escolhida e coloca na array selections
   function choose() {
-    selections[questionCounter] = +$('input[name="answer"]:checked').val();
+    if (questionCounter == 0)
+      selections[questionCounter] = +$('input[name="answer"]:checked').val();
+    else {
+      var inputElements = document.getElementsByClassName("form-input");
+      for (var i = 0; i < inputElements.length; ++i) {
+        if (inputElements[i] != undefined) {
+          if (inputElements[i].checked) {
+            selections[i + 1] = i ?? undefined;
+          }
+        }
+      }
+    }
   }
 
   // busca e exibe o proximo elemento
@@ -152,74 +181,58 @@
   function displayScore() {
     var score = $("<p>", { id: "question" });
     var matchKit;
-    var selection = selections[0] + "" + selections[1];
-    switch (selection) {
-      case "00":
-        matchKit =
-          "Parabéns, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "01":
-        matchKit =
-          "2 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "02":
-        matchKit =
-          "3 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "03":
-        matchKit =
-          "4 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "04":
-        matchKit =
-          "5 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "05":
-        matchKit =
-          "6 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "06":
-        matchKit =
-          "7 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "07":
-        matchKit =
-          "8 Obrigado, você está contribuindo economizar energia e assim presenvar o meio ambiente";
-        break;
-      case "10":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "11":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "12":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "13":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "14":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "15":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "16":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      case "17":
-        matchKit =
-          "Que pena, por favor. Após o uso, desconecte-o da tomada. Assim você estará contribuindo com o meio ambiente";
-        break;
-      default:
-        matchKit = "Sem resposta";
+    let correctAnswer = 0;
+    let incorrectAnswer = 0;
+    // 1 Pergunta - 0 = Sim, 1 = Não
+    if (questions[0].choices[0].check == true && selections[0] == 0) {
+      matchKit =
+        "Parabéns, você esta desligando os equipamentos eletronicos da tomada.";
+    } else {
+      matchKit = "Que pena, por favor. Após o uso, desconecte-o da tomada.";
+    }
+
+    // 2 Pergunta
+    for (let i = 1; i < selections.length; i++) {
+      if (selections[i] != undefined) {
+        if (questions[1].choices[selections[i]].check == true) {
+          correctAnswer++;
+        }
+      }
+    }
+
+    for (let i = 1; i < selections.length; i++) {
+      if (selections[i] != undefined) {
+        if (questions[1].choices[selections[i]].check == false) {
+          incorrectAnswer++;
+        }
+      }
+    }
+
+    function getQtdQuestCorrect() {
+      let qtd = 0;
+      for (let i = 0; i < questions[1].choices.length; i++) {
+        if (questions[1].choices[i].check) qtd++;
+      }
+      return qtd;
+    }
+
+    if (
+      correctAnswer >= getQtdQuestCorrect() / 2 &&
+      correctAnswer != incorrectAnswer
+    ) {
+      if (questions[0].choices[0].check == true && selections[0] == 0) {
+        matchKit += " E você sabe o que é uma fonte de energia renovavel";
+      } else {
+        matchKit += " Mas você sabe o que é uma fonte de energia renovavel";
+      }
+    } else {
+      if (questions[0].choices[0].check == true && selections[0] == 0) {
+        matchKit +=
+          " Mas você não fixou o conteúdo acima sobre as fontes de energia renovavel";
+      } else {
+        matchKit +=
+          " E você não fixou o conteúdo acima sobre as fontes de energia renovavel";
+      }
     }
 
     score.append(matchKit + " !");

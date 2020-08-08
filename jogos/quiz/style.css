@@ -1,6 +1,8 @@
 body {
   font-family: "Moon", Arial, sans serif;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -39,12 +41,13 @@ button {
 }
 
 #container {
-  width: 50%;
+  width: 100%;
   margin: auto;
   padding: 0 25px 40px 10px;
   border-radius: 5px;
   border: 2px solid black;
   font-size: 18px;
+  background-color: red !important;
 }
 
 ul {

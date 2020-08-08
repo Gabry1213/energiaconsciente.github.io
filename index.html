@@ -30,7 +30,8 @@
     <script>
         function modalIdade() {
             $('#exampleModal').modal('show')
-            console.log('hi')
+            var elmnt = document.getElementById("page-1");
+            elmnt.scrollIntoView();
         }
     </script>
 </head>
@@ -51,7 +52,7 @@
         </div>
 
 
-        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column" id="page-1">
             <header class="masthead mb-auto">
                 <div class="inner">
                     <nav class="nav nav-masthead justify-content-center fixed-top" style="background-color: #333;">
@@ -234,10 +235,10 @@
                         uso
                         dos recursos naturais que a região dispõe, através de fontes renováveis e não poluentes.</p>
                 </div>
-                <div class="fixaConteudo mt-3 mb-3 pt-5" id="fixaContent">
+                <div class="fixaConteudo mt-3 mb-3 pt-5 h-100" id="fixaContent">
                     <h2>Fixação do conteúdo</h2>
-                    <div id="gamePC">
-                        <iframe src="jogos/cruzada/index.html">
+                    <div id="gamePC" class="h-100">
+                        <iframe src="jogos/cruzada/index.html" style="width:100%">
                         </iframe>
                     </div>
 
@@ -247,8 +248,8 @@
                         </iframe>
                     </div>
 
-                    <div id="gameQUIZ">
-                        <iframe src="jogos/quiz/index.html" style="width:100%;">
+                    <div id="gameQUIZ" class="container mx-auto">
+                        <iframe src="jogos/quiz/index.html">
                             <p>Quiz</p>
                         </iframe>
                     </div>
