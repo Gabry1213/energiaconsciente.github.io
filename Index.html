@@ -33,6 +33,10 @@
             var elmnt = document.getElementById("page-1");
             elmnt.scrollIntoView();
         }
+        function trocaConteudo(){
+            document.getElementById("energiaKid").style.display = "block";
+             document.getElementById("energia").style.display = "none";
+        }
     </script>
 </head>
 
@@ -42,7 +46,7 @@
         <i class="fas fa-arrow-alt-circle-up" style="font-size: 30px;"></i>
     </button>
 
-    <div id="app">
+    <div id="EE">
         <!-- vlibras -->
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
@@ -255,6 +259,182 @@
                     </div>
                 </div>
             </div>
+            <div class="conteudoKid" id="energiaKid" style="display: none;">
+                <div class="conteudo mt-5 mb-5 pt-5" id="energia">
+                    <div class="energia">
+                        <h3>Energia</h3>
+                        <p style="float: left;"></p>
+    
+                    </div>
+                    <div class="energiaEletrica">
+                        <h3>Energia Elétrica</h3>
+                        <p>A energia elétrica é uma forma de potência eficaz na criação do que
+                            usualmente se chama voltagem (também conhecida como diferença de potencial elétrico) entre dois
+                            pontos, que permitem
+                            criar uma corrente elétrica (fluxo ordenado de partículas portadoras de carga elétrica) entre
+                            ambos.
+                        </p>
+                    </div>
+                    <div class="fontesEner">
+                        <h3>As fontes energéticas</h3>
+                        <div class="container-fluid">
+                            <div class="row" style="margin-bottom: 5%;">
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Usina Hidrelétrica</p>
+                                    <img src="img/hidreletricaDesenho.jpg" alt="Imagem representa uma usina hidreletrica"
+                                        style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Carvão Mineral</p>
+                                    <img src=" img/carvao.jpg"
+                                        alt="Imagem representa um carrinho utilizado na extração de carvão das minas."
+                                        style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Turbinas Aerogeradoras</p>
+                                    <img src="img/turbina.gif"
+                                        alt="imagem representa uma turbina Aerogeradora na produção de energia eolica."
+                                        style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Biomassa</p>
+                                    <img src="img/biomassa.jpg"
+                                        alt="imagem representa uma quantidade de material que irá ser utilizado na produção de energia biomassa"
+                                        style="width:100%;height:100%;">
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 5%;">
+                                    <p>Solar</p>
+                                    <img src="img/solar.jpg"
+                                        alt="imagem representa uma estação de paineis fotossensores para capitação de raios solares."
+                                        style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Petróleo</p>
+                                    <img src="img/petroleo.jpg" alt="imagem representa uma estação de extração de Petróleo"
+                                        style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Usina Geotérmica</p>
+                                    <img src="img/geo.jpg" alt="imagem representa uma usina Geotérmica"
+                                        style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-xs-6 col-sm-3" id="col">
+                                    <p>Usina Nuclear</p>
+                                    <img src="img/nuclear.jpg" alt="imagem representa uma usina nuclear"
+                                        style="width:100%;height:100%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="classFontes">
+                        <h3>Classificação das fontes energéticas</h3>
+                        <p>Cada fonte energética existente possui sua classificação, seja ela renovável ou não
+                            renovável.
+                        </p>
+                        <h4>Fontes renováveis</h4>
+                        <p>As fontes renováveis são aquelas que em particular, podem se auto regenerar ou por ações
+                            humanasos recursos naturais. Podem ser considerados como fontes energéticas limpas.</p>
+                        <ol class="lista" style="padding-left: 1.6%;">
+                            <li>Usina Hidrelétrica</li>
+                            <li>Solar</li>
+                            <li>Geotérmica</li>
+                            <li>Biomassa</li>
+                            <li>Eólica</li>
+                        </ol>
+                        <h4>Fontes não renováveis</h4>
+                        <p>As fontes não renováveis são aquelas que se encontram na natureza em grandes quantidades, mas
+                            uma
+                            vez esgotadas, não podem mais ser regeneradas.</p>
+                        <ol style="padding-left: 1.6%;">
+                            <li>Unisa Nuclear</li>
+                            <li>Petróleo</li>
+                            <li>Carvão Mineral</li>
+                        </ol>
+                    </div>
+                    <div class="fonteBrasil" style="margin-top:5%;">
+                        <h3>Fontes energéticas existentes no Brasil</h3>
+                        <p>No Brasil existem cinco fontes energéticas, porém a predominante entre o território nacional
+                            são
+                            as Usinas hidrelétricas. As quatro outras fontes energéticas são elas: Energia
+                            Termoelétrica,
+                            Eólica, Nuclear e Solar.</p>
+                        <h4>Amazonas</h4>
+                        <p>As fontes energéticas implantadas pelo estado do Amazonas são bem diversificadas. Sendo
+                            constituído de: Energia Solar, Hidrelétrica, Biomassa, Gás
+                            Natural e Combustível Fóssil.</p>
+                        <h4>Presidente Figueiredo</h4>
+                        <p>No município de Presidente Figueiredo, 107KM da capital do Estado. Possui uma fonte
+                            energética
+                            considerada limpa e renovável. A Usina hidreletrica do município está localizado na Vila de
+                            Balbina. Onde é concentrado a produção de energia eletrica do município.</p>
+                        <img src="img/balbinahidreletrica.jpg" alt="imagem representa a usina hidreletrica de balbina"
+                            class="container">
+                    </div>
+                    <div class="desperdicio" style="margin-top:5%;">
+                        <h3>Desperdício de energia elétrica</h3>
+                        <p>O desperdício de energia deveria ser uma das maiores preocupações da atualidade, uma vez que
+                            a
+                            falta
+                            de compromisso com o seu uso racional e econômico, aponta a necessidade de novos meios para
+                            gerar
+                            maior quantidade de energia. Para atender a essa demanda, novas usinas hidrelétricas são
+                            criadas
+                            e
+                            embora façam parte de fontes renováveis, trazem consigo grandes destruições da fauna e da
+                            flora,
+                            processos estes já bastante conhecidos na região de Presidente Figueiredo, município onde se
+                            localiza a Usina Hidrelétrica de Balbina.</p>
+                        <p>Nesse intuito, durante as aulas sobre fontes sustentáveis de energia, investigamos os alunos
+                            de
+                            nível técnico e tecnológico por meio de questionamentos sobre o uso de energia elétrica em
+                            suas
+                            casas. A escolha desse público alvo se deu pelo motivo de atendermos alunos de diversas
+                            comunidades rurais e da sede do município em questão, evidenciando um campo diversificado e
+                            fértil para a pesquisa.
+                        </p>
+                        <p>Foi realizado uma entrevista. Dos entrevistados, 80% acham que não há consumo exagerado em
+                            sua
+                            casa, mas 70% afirmam que todos os aparelhos elétricos ficam constantemente ligados na
+                            tomada,
+                            pois a sua ligação se torna mais fácil. Quanto ao uso do chuveiro elétrico, dos
+                            entrevistados
+                            apenas 25% possuem esse equipamento, no entanto, o banho quente faz parte da rotina da casa.
+                            Das
+                            pessoas que tomam o banho quente, 100% não têm preocupação com o tempo do banho. Em se
+                            tratando
+                            do tipo de lâmpada das residências, 20% ainda usam a lâmpada incandescente e os 80%
+                            restantes,
+                            não diferenciam se é a fluorescente ou a de led. Somente 4% dos entrevistados fazem uso de
+                            fontes alternativas de energia em sua residência, como a roda d’agua.
+                        </p>
+                        <p>Diante disto, percebe-se que não há uma política educacional voltada para o uso consciente da
+                            energia elétrica. Ainda somos frutos do incentivo ao consumo exagerado e assim o fazemos.
+                            Necessitamos urgentemente mostrar mecanismos de economias através do ensino e incentivar o
+                            uso
+                            dos recursos naturais que a região dispõe, através de fontes renováveis e não poluentes.</p>
+                    </div>
+                    <div class="fixaConteudo mt-3 mb-3 pt-5 h-100" id="fixaContent">
+                        <h2>Fixação do conteúdo</h2>
+                        <div id="gamePC" class="h-100">
+                            <iframe src="jogos/cruzada/index.html" style="width:100%">
+                            </iframe>
+                        </div>
+    
+                        <div id="gameCP" class="row d-flex justify-content-center">
+                            <iframe src="jogos/cacapalavra/wordsearch.html">
+                                <p>Caça Palavras</p>
+                            </iframe>
+                        </div>
+    
+                        <div id="gameQUIZ" class="container mx-auto">
+                            <iframe src="jogos/quiz/index.html">
+                                <p>Quiz</p>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Footer -->
         </div>
         <footer class="page-footer font-small teal pt-4" style="background-color: #222;">
@@ -322,7 +502,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Não</button>
-                    <button type="button" class="btn btn-primary btn-lg">Sim</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" onclick="trocaConteudo()">Sim</button>
                 </div>
             </div>
         </div>
@@ -334,20 +514,6 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
     <!-- vlibras -->
-    <script>
-        var app = new Vue({
-            el: "#app",
-            data: {
-                showModalIdade: true
-            },
-            filters: {
-
-            },
-            methods: {
-
-            }
-        });
-    </script>
     <script>
         //Get the button
         var mybutton = document.getElementById("myBtn");
