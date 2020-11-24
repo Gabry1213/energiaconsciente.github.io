@@ -1,76 +1,30 @@
 import Head from 'next/head'
 import { Container, Row, Card, Button } from 'react-bootstrap'
+import Cover from './components/Cover'
+import EnergiaClassificacao from './contents/energia.classificação'
+import Energia from './contents/energia'
+import EnergiaEletrica from './contents/energia.eletrica'
+import EnergiaFontes from './contents/energia.fontes'
+import EnergiaBrasil from './contents/EnergiaBrasil'
+import EnergiaDesperdicio from './contents/EnergiaDesperdicio'
+
 
 export default function Home() {
   return (
-    <Container className="md-container">
+    <Container>
       <Head>
-        <title>ReactJS with react-bootstrap</title>
+        <title>Energia</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
       <Container>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <p>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <Cover/>
         <Container>
-          <Row className="justify-content-md-between">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Documentation</Card.Title>
-                <Card.Text>
-                  Find in-depth information about Next.js features and API.
-                </Card.Text>
-                <Button variant="primary" href="https://nextjs.org/docs">
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Learn</Card.Title>
-                <Card.Text>
-                  Learn about Next.js in an interactive course with quizzes!
-                </Card.Text>
-                <Button variant="primary" href="https://nextjs.org/learn">
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-          </Row>
-          <Row className="justify-content-md-between">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Examples</Card.Title>
-                <Card.Text>
-                  Discover and deploy boilerplate example Next.js projects.
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  href="https://github.com/vercel/next.js/tree/master/examples"
-                >
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Deploy</Card.Title>
-                <Card.Text>
-                  Instantly deploy your Next.js site to a public URL with
-                  Vercel.
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  href="https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=example&utm_campaign=next-example"
-                >
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-          </Row>
+          <Energia/>
+          <EnergiaEletrica/>
+          <EnergiaClassificacao/>
+          <EnergiaFontes/>
+          <EnergiaBrasil/>
+          <EnergiaDesperdicio/>
         </Container>
       </Container>
 
