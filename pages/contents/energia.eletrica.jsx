@@ -1,19 +1,20 @@
+import Title from "../components/Title";
+import SubTitle from "./../components/SubTitle"
 
-const EnergiaEletrica = () => {
+export default function EnergiaEletrica ()  {
     return (
-        <div class="container p-4">
-            <h2 class="font-weight-normal text-center">Energia Elétrica</h2>
-            <p class="font-weight-normal">A energia elétrica é uma forma de potência eficaz na criação do
+        <div id="energia-eletrica" className="container p-4">
+            <Title text="Energia Elétrica"/>
+            <SubTitle text="A energia elétrica é uma forma de potência eficaz na criação do
                 que
                 usualmente se chama voltagem (também conhecida como diferença de potencial elétrico) entre
                 dois
                 pontos, que permitem
                 criar uma corrente elétrica (fluxo ordenado de partículas portadoras de carga elétrica)
                 entre
-                ambos.
-            </p>
+                ambos."/>
+            
         </div>
     );
 }
 
-export default EnergiaEletrica;

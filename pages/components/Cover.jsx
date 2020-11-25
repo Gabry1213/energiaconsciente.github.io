@@ -1,37 +1,24 @@
-import React from 'react';
 import './../../style/cover.module.css'
+import Title from './Title';
 
-const Cover = () => {
+const jumbotronBg = {
+    background: "rgb(34,66,142)",
+    background: "linear-gradient(90deg, rgba(34,66,142,1) 0%, rgba(57,92,159,1) 100%)"
+}
+
+export default function Cover () {
     return (
-        <div className="bodyCover">
-             <div classname="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <header classname="masthead mb-auto">
-                    <div classname="inner">
-                    <h3 classname="masthead-brand">Cover</h3>
-                    <nav classname="nav nav-masthead justify-content-center">
-                        <a classname="nav-link active" href="#">Home</a>
-                        <a classname="nav-link" href="#">Features</a>
-                        <a classname="nav-link" href="#">Contact</a>
-                    </nav>
-                    </div>
-                </header>
-
-                <main role="main" classname="inner cover">
-                    <h1 classname="cover-heading">Cover your page.</h1>
-                    <p classname="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-                    <p classname="lead">
-                    <a href="#" classname="btn btn-lg btn-secondary">Learn more</a>
-                    </p>
-                </main>
-
-                <footer classname="mastfoot mt-auto">
-                    <div classname="inner">
-                    <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-                    </div>
-                </footer>
+        <div className="jumbotron p-4 p-md-5 mt-5 text-white rounded" style={jumbotronBg} >
+            <div className="row flex">
+                <div className="col-md-6 col-sm-12 px-0">
+                    <Title text="Energia" margin="" align="left" color="white"/>
+                    <p>Energia é a capacidade de algo de realizar trabalho, ou seja, gerar força num determinado corpo, substância ou sistema físico</p>
+                    <button type="button" className="btn btn-warning">Conhecer mais</button>
+                </div>
+                <div className="col-md-6  col-sm-12 px-0 text-center">
+                    <img src="./assets/img/marginalia-123.png" className="mr-2" style={{width: "120px"}} />
+                </div>
             </div>
         </div>
     );
-}
-
-export default Cover;
+}   

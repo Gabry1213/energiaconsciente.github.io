@@ -1,13 +1,17 @@
-export default function Card (title, subtitle, img) {
-    return <div className="col-md-4">
-            <div className="card mb-4 shadow-sm">
-                <img src={img} className="card-image-bg"/>
-                <div className="card-body">
-                    <h4 className="text-center">{{ title }}</h4>
-                    <p className="card-text">
-                        {{ subtitle }}
-                    </p>
+import SubTitle from "./SubTitle";
+
+
+
+
+
+export default function Card (props) {
+    return <div id="energia" className="col-md-4">
+                <div className="mb-4 shadow-sm bcard-card-2">
+                    <img src={props.img} className="img img-responsive"/>
+                    <div className="bcard-name">
+                        <p>{ props.title }</p>
+                        {/* <SubTitle text={props.title}/> */}
+                    </div>
                 </div>
-            </div>
-        </div>;
+            </div>;
 }

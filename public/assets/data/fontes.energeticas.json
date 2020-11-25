@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Usina hidrelétrica",
+    "subtitle": "Imagem representa uma usina hidreletrica",
+    "img": "https://s3-sa-east-1.amazonaws.com/descomplica-blog/wp-content/uploads/2014/12/hidreletrica-da-empresa-Cemig-size-598.jpg"
+  },
+  {
+    "title": "Carvão Mineral",
+    "subtitle": "Imagem representa um carrinho utilizado na extração de carvão das minas.",
+    "img": "https://cdn4.ecycle.com.br/cache/images/eDicas/diaadia/50-650-carvao-750.jpg"
+  },
+  {
+    "title": "Turbinas Aerogeradoras",
+    "subtitle": "imagem representa uma turbina Aerogeradora na produção de energia eolica.",
+    "img": "https://4.bp.blogspot.com/-w3qfJK4c3wg/ULhls0eI-tI/AAAAAAAAAIk/l_tf1bGbP34/s1600/e%C3%B3lica.jpg"
+  },
+  {
+    "title": "Biomassa",
+    "subtitle": "Imagem representa uma quantidade de material que irá ser utilizado na produção de energia biomassa",
+    "img": "https://i2.wp.com/forumdoacre.org.br/wp-content/uploads/2018/05/biomassa-energia-eletrica-03.jpg?fit=778%2C350&ssl=1"
+  },
+  {
+    "title": "Solar",
+    "subtitle": "Imagem representa uma estação de paineis fotossensores para capitação de raios solares",
+    "img": "./assets/img/solar.jpg"
+  },
+  {
+    "title": "Petróleo",
+    "subtitle": "imagem representa uma estação de extração de Petróleo",
+    "img": "./assets/img/petroleo.jpg"
+  },
+  {
+    "title": "Usina Geotérmica",
+    "subtitle": "Imagem representa uma usina Geotérmica",
+    "img": "./assets/img/geo.jpg"
+  }
+]
