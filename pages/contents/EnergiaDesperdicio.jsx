@@ -1,7 +1,7 @@
 import Title from './../components/Title'
 import SubTitle from './../components/SubTitle'
 
-const EnergiaDesperdicio = () => {
+export default function EnergiaDesperdicio ()  {
     return (
         <div id="energia-desperdicio" className="row featurette">
           <div className="col-md-7 col-sm-12">
